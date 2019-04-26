@@ -1,0 +1,12 @@
+Heroku was done with:
+
+@ A			216.239.3   2.21
+@ TXT/SPF			google-site-verification=POivNWIaoUxWOnCjUU-4EzouLo_13p9Ex3Q5NCz-4Ho
+@ MX	10		mx0.123-reg.co.uk.
+@ MX	20		mx1.123-reg.co.uk.
+www CNAME			www.lowhall.org.herokudns.com.
+
+Note, when moving to github pages, the CNAME is NOT that of the project / repo.
+It is the main username, ie hlascelles.github.io.
+
+This was a good guide: https://stackoverflow.com/a/9123911/1267203
