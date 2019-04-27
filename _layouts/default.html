@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<div class="container" id="main-content">
+<div class="container hidden" id="main-content">
   <table width="100%" border="0" cellspacing="0" cellpadding="0" class="header">
 
     <tr valign="middle" class="headermain"><!-- Row 1 -->
@@ -575,17 +575,20 @@
 </script>
 
 
-<h3 id="incorrect-password">Incorrect password</h3>
+<h3 id="incorrect-password" style="text-align: center">Incorrect password</h3>
 
 <script>
-  // The most basic of all password systems, one with no security value whatsoever.
-  // Not meant for any defence at all, just for fun (especially since it overuses sha256).
-  var cookie = document.cookie;
-  if ((cookie + "").indexOf("view=true") !== -1) {
+  var reveal = function() {
     var main = document.querySelector('#main-content');
     main.classList.remove('hidden');
     var ip = document.querySelector('#incorrect-password');
     ip.classList.add('hidden');
+  };
+  // The most basic of all password systems, one with no security value whatsoever.
+  // Not meant for any defence at all, just for fun (especially since it overuses sha256).
+  var cookie = document.cookie;
+  if ((cookie + "").indexOf("view=true") !== -1) {
+    reveal();
   } else {
     var input = prompt("Enter password:");
 
@@ -595,7 +598,7 @@
 
       if (hash.hex() === "93969d193161ae6fbd17b30055a9ed9789cb4bd80a7df0c6df15d3dd98fd7591") {
         document.cookie = "view=true";
-        location.reload();
+        reveal();
       }
     }
   }
