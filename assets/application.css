@@ -18,9 +18,6 @@ TD.lowhall {
   font-weight: bold;
 }
 
-TABLE.header {
-}
-
 TD.headergrad {
   background: #E4E495;
   border: solid 1px #aaa;
@@ -48,10 +45,26 @@ A:visited {
 
 H1 {
   font-size: 36pt;
-
 }
 
-P {
-
+img {
+  display: block;
+  margin: auto; /* Centre images */
 }
 
+.hidden {
+  display: none;
+}
+
+.caption {
+  font-size: 14pt;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Bootstrap updates */
+@media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
