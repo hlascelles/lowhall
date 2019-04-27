@@ -582,6 +582,8 @@
 </script>
 
 
+<h3 id="incorrect-password">Incorrect password</h3>
+
 <script>
   // The most basic of all password systems, one with no security value whatsoever.
   // Not meant for any defence at all, just for fun (especially since it overuses sha256).
@@ -589,6 +591,8 @@
   if ((cookie + "").indexOf("view=true") !== -1) {
     var main = document.querySelector('#main-content');
     main.classList.remove('hidden');
+    var ip = document.querySelector('#incorrect-password');
+    ip.classList.add('hidden');
   } else {
     var input = prompt("Enter password:");
 
@@ -603,8 +607,6 @@
     }
   }
 </script>
-
-<h3>Incorrect password</h3>
 
 </body>
 </html>
