@@ -13,6 +13,7 @@ TD.links {
 }
 
 TD.lowhall {
+  padding-left: 10px;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 32pt;
   font-weight: bold;
@@ -67,4 +68,8 @@ img {
     .container{
         max-width: 970px;
     }
+}
+
+h2 {
+  margin-top: 0px;
 }
