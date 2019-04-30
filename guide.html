@@ -4,7 +4,23 @@ layout: default
 ---
 
 <script>
-  var str = "aHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vZG9jdW1lbnQvZC8xQkx2WUEtRmhWcUdTckFkdW9nQVRfWnJ2NmtuZU52d0NpVXhqemcyVXdU";
-  var decodedData = window.atob(str + "QQ"); // decode the string
-  window.location.replace(decodedData);
+  var goto = function() {
+    var pwd = cookie_password();
+    // To generate this link hash:
+    // CryptoJS.AES.encrypt("link", key, { iv: iv }).toString()
+    var str = "wZqHIe32AlNbCVVY/y6E6s9V9k2roZHhHHloanIrDiP+LybFJf4UeMokd4q2eQlPJw656iduQxM0UjS6ttpiyfOOfx9ZPvl4lH5EjzxN1Jc=";
+    var padded = pwd;
+    while(padded.length < 16) {
+      padded = padded + "x";
+    }
+    var key = CryptoJS.enc.Utf8.parse(padded);
+    var link = CryptoJS.AES.decrypt(str, key, { iv: iv }).toString(CryptoJS.enc.Utf8);
+    window.location.replace(link);
+  };
+
+  if (!!cookie_password()) {
+    goto();
+  } else {
+    prompter(goto);
+  }
 </script>
