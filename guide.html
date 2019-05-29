@@ -8,7 +8,10 @@ layout: default
     var pwd = cookie_password();
     // To generate this link hash:
     // CryptoJS.AES.encrypt("link", key, { iv: iv }).toString()
-    var str = "wZqHIe32AlNbCVVY/y6E6s9V9k2roZHhHHloanIrDiP+LybFJf4UeMokd4q2eQlPJw656iduQxM0UjS6ttpiyfOOfx9ZPvl4lH5EjzxN1Jc=";
+
+    // NOTE, this page is now not used.
+    var str = "someencryptedlink"; // This would normally have the link encrypted with the function above.
+
     var padded = pwd;
     while(padded.length < 16) {
       padded = padded + "x";

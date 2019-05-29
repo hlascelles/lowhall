@@ -20,7 +20,7 @@
 
     var cookie_password = function() {
       var cookie = document.cookie || "";
-      return cookie.split(";")[0].split("password=")[1];
+      return cookie.substring(cookie.indexOf("password=")).split(";")[0].substring(9);
     };
 
     var key = CryptoJS.enc.Hex.parse("000102030405060708090a0b0c0d0e0f");
@@ -45,12 +45,13 @@
 <body>
 
 <div class="container hidden" id="main-content">
-  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="header">
-
-    <tr valign="middle" class="headermain"><!-- Row 1 -->
-      <td class="lowhall">Low Hall</td><!-- Col 2 -->
-      <td>
-        <table width="100%" border="0">
+  <div class="header headermain">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <div class="lowhall-title">Low Hall</div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <table width="100%" border="0" style="margin-top: 8px; margin-left: 10px;">
 
           <tr><!-- Row 1 -->
             <td class="links" width="33%"><a
@@ -67,12 +68,13 @@
             <td class="links"><a
               href="contact">Contact</a></td><!-- Col 3 --></tr>
         </table>
-      </td>
-    </tr>
+      </div>
+    </div>
+  </div>
 
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr height="3">
       <Td colspan=2>
-
       </TD>
     </tr>
     <tr>

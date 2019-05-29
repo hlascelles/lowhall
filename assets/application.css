@@ -9,22 +9,22 @@ BODY {
 TD.links {
   font-size: 12pt;
   text-decoration: none;
-  text-align: right;
+  padding-right: 20px;
 }
 
-TD.lowhall {
+.lowhall-title {
   padding-left: 10px;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 32pt;
   font-weight: bold;
 }
 
-TD.headergrad {
+.headergrad {
   background: #E4E495;
   border: solid 1px #aaa;
 }
 
-TR.headermain {
+.headermain {
   background: #99CC99;
   border: solid 1px #aaa;
 }
@@ -51,6 +51,7 @@ H1 {
 img {
   display: block;
   margin: auto; /* Centre images */
+  max-width: 100%;
 }
 
 .hidden {
