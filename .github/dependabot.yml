@@ -2,11 +2,13 @@ version: 2
 updates:
 - package-ecosystem: "bundler"
   directory: "/"
+  target_branch: "gh-pages"
   schedule:
     interval: "daily"
 
 - package-ecosystem: "npm"
   # Look for `package.json` and `lock` files in the `root` directory
   directory: "/"
+  target_branch: "gh-pages"
   schedule:
     interval: "daily"
